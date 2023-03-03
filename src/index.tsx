@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { 
+import {
   googleWallet,
   facebookWallet,
   githubWallet,
@@ -42,16 +42,16 @@ const connectors = connectorsForWallets([
   {
     groupName: 'Social',
     wallets: [
-      googleWallet({options: { projectId }}),
-      facebookWallet({options: { projectId  }}),
-      githubWallet({options: { projectId }}),
-      discordWallet({options: { projectId }}),
-      twitchWallet({options: { projectId }}),
-      twitterWallet({options: { projectId }})
+      googleWallet({ options: { projectId } }),
+      facebookWallet({ options: { projectId } }),
+      githubWallet({ options: { projectId } }),
+      discordWallet({ options: { projectId } }),
+      twitchWallet({ options: { projectId } }),
+      twitterWallet({ options: { projectId } })
     ],
   },
   {
-    groupName: 'AA Wallets',
+    groupName: 'Web3 Wallets (AA-enabled)',
     wallets: [
       enhanceWalletWithAAConnector(metaMaskWallet({ chains }), { projectId }),
       enhanceWalletWithAAConnector(walletConnectWallet({ chains }), { projectId }),
